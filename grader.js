@@ -72,3 +72,6 @@ if(require.main == module) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+if (program.url)
+   checkUrl(program.url, program.checks);
+else checkHtmlFile(program.file, program.checks);
